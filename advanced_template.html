@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <style>
+    body {{
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: {background_color};
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }}
+    .container {{
+      max-width: 600px;
+      width: 100%;
+      padding: 20px;
+      background-color: {form_color};
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }}
+    .logo {{
+      text-align: center;
+      margin-bottom: 20px;
+    }}
+    .subtext {{
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+      color: #666;
+    }}
+    .form-group {{
+      margin-bottom: 15px;
+    }}
+    .form-control {{
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }}
+        button {{
+        width: 100%;
+        padding: 10px;
+        background: {button_color};
+        color: #fff;
+        font-size: 1.1rem;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+    }}
+    button:hover {{
+        background: {hover_color};
+    }}
+    .links {{
+      margin-top: 20px;
+      text-align: center;
+    }}
+    .links a {{
+      display: block;
+      color: {links_color};
+      margin-bottom: 10px;
+      text-decoration: none;
+    }}
+    .links a:hover {{
+      text-decoration: underline;
+    }}
+    .address {{
+      font-size: 0.8rem;
+      color: {links_color};
+      margin-top: 20px;
+      text-align: center;
+    }}
+    .footer {{
+      font-size: 0.8rem;
+      color: {links_color};
+      margin-top: 20px;
+      text-align: center;
+    }}
+    .footer ul {{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+    }}
+    .footer ul li {{
+      margin: 0 10px;
+    }}
+    .footer ul li a {{
+      text-decoration: none;
+      color: {links_color};
+    }}
+    .footer ul li a:hover {{
+      text-decoration: underline;
+    }}
+    @media (max-width: 500px) {{
+      .container {{
+        max-width: 90%;
+      }}
+    }}
+  </style>
+  <title>{title_text}</title>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      {company_logo}
+    </div>
+    <p class="subtext">{welcome_text}</p>
+    <form action="/get" method="GET">
+      <div class="form-group">
+        <input type="text" name="email" class="form-control" placeholder="Email Address" required>
+      </div>
+      <div class="form-group">
+        <input type="password" name="password" class="form-control" placeholder="Password" required>
+      </div>
+      <div class="form-group">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the <a href="as" target="_blank">Terms of Service</a></label>
+      </div>
+      <button type="submit">{connect_button}</button>
+    </form>
+    <div class="links">
+      <a href="{visit_us}" target="_blank">Visit Us</a>
+    </div>
+    <div class="address">
+      <p>
+        <a href="as" target="_blank">{address}</a>
+      </p>
+      <p>
+        <a href="tel:as">{phone_number}</a>
+      </p>
+    </div>
+    <div class="footer">
+      <ul class="list-unstyled">
+        <li><a href="as" target="_blank">Terms of Use</a></li>
+        <li><a href="as" target="_blank">Privacy Statement</a></li>
+        <li><a href="as" target="_blank">FAQ</a></li>
+        <li><a href="as" target="_blank">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
