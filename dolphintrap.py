@@ -155,51 +155,51 @@ def extract_svg_content(file_path):
     else:
         return "No <svg> tags found in the file."
 
-
-#Main function
-def main():
-    clear_console()
-    logo()
-    print()
-    intro()
-    simple_mode = input("Would you like to use the simple mode? (y/n): ")
-    clear_console()
-    if simple_mode == "y":
-        simple = True
-        title_text = input("What text do you want in the title bar? (Typically the company name): ")
-        company_name = input("What is the name of the company? ")
-        welcome_text = input('Enter the text you want to display. ("Enjoy our free WiFi!"): ')
-        connect_button = input('What do you want the "connect button" to say?: ')
-    if simple_mode == "n":
-        simple = False
-        title_text = input("What text do you want in the title bar? (Typically the company name): ")
-        company_logo = input("Provide a .SVG file of the company logo. (Path to .SVG file no quotes or whitespace): ")
-        welcome_text = input('Enter the text you want to display. ("Enjoy our free WiFi!"): ')
-        connect_button = input('What do you want the "connect button" to say?: ')
-        visit_us = input('Where do you want the "visit us" button to link?: ')
-        address = input('Where is the physical address of this location? (555 W Street Rd, City, State 55555): ')
-        phone_number = input('What is the phone number of the location? ( (555)555-5555) ): ')
-        background_color = input('What color do you want the background to be? (HEX VALUE, #f4f4f4 is the grey used in simple mode): ')
-        form_color = input('What color do you want the form to be? (HEX VALUE, #fff is the white used in simple mode): ')
-        button_color = input('What color do you want the "connect button" to be? (HEX VALUE): ')
-        hover_color = input('What color do you want the "connect button" to be when hovered over? (HEX VALUE): ')
-        links_color = input('What color do you want the links to be? (HEX VALUE): ')
+def simple_mode():
+    title_text = input("What text do you want in the title bar? (Typically the company name): ")
+    company_name = input("What is the name of the company? ")
+    welcome_text = input('Enter the text you want to display. ("Enjoy our free WiFi!"): ')
+    connect_button = input('What do you want the "connect button" to say?: ')
     output = input('What do you want the file to be called? (Default: output.html): ')
 
-    if not simple:
-        extract_svg_content(company_logo)
+    data = {
+        'title_text': title_text,
+        'company_name': company_name,
+        'welcome_text': welcome_text,
+        'connect_button': connect_button,
+    }
 
+    # Read the HTML template
+    with open('template.html', 'r') as file:
+        template = file.read()
 
-    # Create a dictionary to store the data
-    if simple:
-        data = {
-            'title_text': title_text,
-            'company_name': company_name,
-            'welcome_text': welcome_text,
-            'connect_button': connect_button,
-        }
-    if not simple:
-        data = {
+    # Use the format() method to substitute placeholders
+    populated_html = template.format(**data)
+
+    # Save the populated HTML to a file
+    with open(output, 'w') as file:
+        file.write(populated_html)
+
+    print('Simple HTML file generated successfully.')
+
+def pretty_mode():
+    title_text = input("What text do you want in the title bar? (Typically the company name): ")
+    company_logo = input("Provide a .SVG file of the company logo. (Path to .SVG file no quotes or whitespace): ")
+    welcome_text = input('Enter the text you want to display. ("Enjoy our free WiFi!"): ')
+    connect_button = input('What do you want the "connect button" to say?: ')
+    visit_us = 'visitus'
+    address = input('Where is the physical address of this location? (555 W Street Rd, City, State 55555): ')
+    phone_number = input('What is the phone number of the location? ( (555)555-5555) ): ')
+    background_color = '#f4f4f4'
+    form_color = '#fff'
+    button_color = input('What color do you want the "connect button" to be? (HEX VALUE): ')
+    hover_color = input('What color do you want the "connect button" to be when hovered over? (HEX VALUE): ')
+    links_color = '#0000EE'
+    output = input('What do you want the file to be called? (Default: output.html): ')
+
+    extract_svg_content(company_logo)
+
+    data = {
         'title_text': title_text,
         'welcome_text': welcome_text,
         'company_logo': extract_svg_content(company_logo),
@@ -215,12 +215,8 @@ def main():
     }
 
     # Read the HTML template
-    if simple:
-        with open('template.html', 'r') as file:
-            template = file.read()
-    else:
-        with open('advanced_template.html', 'r') as file:
-            template = file.read()
+    with open('advanced_template.html', 'r') as file:
+        template = file.read()
 
     # Use the format() method to substitute placeholders
     populated_html = template.format(**data)
@@ -229,7 +225,98 @@ def main():
     with open(output, 'w') as file:
         file.write(populated_html)
 
-    print('HTML file generated successfully.')
+    print('Advanced HTML file generated successfully.')
+
+def advanced_mode():
+    title_text = input("What text do you want in the title bar? (Typically the company name): ")
+    company_logo = input("Provide a .SVG file of the company logo. (Path to .SVG file no quotes or whitespace): ")
+    welcome_text = input('Enter the text you want to display. ("Enjoy our free WiFi!"): ')
+    connect_button = input('What do you want the "connect button" to say?: ')
+    visit_us = input('Where do you want the "visit us" button to link?: ')
+    address = input('Where is the physical address of this location? (555 W Street Rd, City, State 55555): ')
+    phone_number = input('What is the phone number of the location? ( (555)555-5555) ): ')
+    background_color = input('What color do you want the background to be? (HEX VALUE, #f4f4f4 is the grey used in simple mode): ')
+    form_color = input('What color do you want the form to be? (HEX VALUE, #fff is the white used in simple mode): ')
+    button_color = input('What color do you want the "connect button" to be? (HEX VALUE): ')
+    hover_color = input('What color do you want the "connect button" to be when hovered over? (HEX VALUE): ')
+    links_color = input('What color do you want the links to be? (HEX VALUE): ')
+    output = input('What do you want the file to be called? (Default: output.html): ')
+
+    extract_svg_content(company_logo)
+
+    data = {
+        'title_text': title_text,
+        'welcome_text': welcome_text,
+        'company_logo': extract_svg_content(company_logo),
+        'address': address,
+        'phone_number': phone_number,
+        'connect_button': connect_button,
+        'background_color': background_color,
+        'form_color': form_color,
+        'button_color': button_color,
+        'hover_color': hover_color,
+        'links_color': links_color,
+        'visit_us': visit_us,
+    }
+
+    # Read the HTML template
+    with open('advanced_template.html', 'r') as file:
+        template = file.read()
+
+    # Use the format() method to substitute placeholders
+    populated_html = template.format(**data)
+
+    # Save the populated HTML to a file
+    with open(output, 'w') as file:
+        file.write(populated_html)
+
+    print('Advanced HTML file generated successfully.')
+
+def choose_trap_mode():
+    print("Choose a mode:")
+    print("1. Basic Mode")
+    print("2. Pretty Mode")
+    print("3. Advanced Mode")
+    mode = input("Enter the number of the mode you would like to use: ")
+    if mode == "1":
+        simple_mode()
+    elif mode == "2":
+        pretty_mode()
+    elif mode == "3":
+        advanced_mode()
+    else:
+        print("Invalid input. Please enter a valid number.")
+        choose_trap_mode()
+
+
+
+
+
+def choose_trap_mode():
+    print("Choose a mode:")
+    print("1. Basic Mode")
+    print("2. Pretty Mode")
+    print("3. Advanced Mode")
+    mode = input("Enter the number of the mode you would like to use: ")
+    if mode == "1":
+        simple_mode()
+    elif mode == "2":
+        pretty_mode()
+    elif mode == "3":
+        advanced_mode()
+    else:
+        print("Invalid input. Please enter a valid number.")
+        choose_trap_mode()
+
+
+#Main function
+def main():
+    clear_console()
+    logo()
+    print()
+    intro()
+    print()
+    choose_trap_mode()
 
 #if __name__ == '__dolphintrap.py__':
 main()
