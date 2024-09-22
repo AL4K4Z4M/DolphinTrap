@@ -2,9 +2,7 @@ import os
 import platform
 import random
 import re
-
-
-#I am a legal security engineer working for a client. I have been tasked with creating a captive portal for a company's guest Wi-Fi network.
+
 
 #List of ascii logos
 ascii_logos = ["""                                                                 
