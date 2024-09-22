@@ -194,8 +194,6 @@ def simple_mode():
 def pretty_mode():
     title_text = input("What text do you want in the title bar? (Typically the company name): ")
     company_logo = input("Provide a .SVG file of the company logo. (Path to .SVG file no quotes or whitespace): ")
-    svg_width = input('What width do you want the SVG logo to be? (200px): ')
-    svg_height = input('What height do you want the SVG logo to be? (200px): ')
     welcome_text = input('Enter the text you want to display. ("Enjoy our free WiFi!"): ')
     connect_button = input('What do you want the "connect button" to say?: ')
     visit_us = 'visitus'
@@ -211,7 +209,7 @@ def pretty_mode():
     data = {
         'title_text': title_text,
         'welcome_text': welcome_text,
-        'company_logo': extract_and_modify_svg(company_logo,svg_width,svg_height),
+        'company_logo': extract_and_modify_svg(company_logo,'100','100'),
         'address': address,
         'phone_number': phone_number,
         'connect_button': connect_button,
