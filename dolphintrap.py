@@ -140,20 +140,29 @@ def clear_console():
         os.system('clear')
 
 
-# Function to extract SVG content between <svg> and </svg>
-def extract_svg_content(file_path):
+# Function to extract SVG content and modify height and width
+def extract_and_modify_svg(file_path, new_width, new_height):
     # Read the file contents
     with open(file_path, 'r', encoding='utf-8') as file:
         file_contents = file.read()
 
-    # Use regex to find content between <svg> and </svg>
-    match = re.search(r'<svg.*?>.*?</svg>', file_contents, re.DOTALL)
+    # Use regex to find the opening <svg> tag and capture its attributes
+    svg_tag_match = re.search(r'(<svg\s.*?>)', file_contents, re.DOTALL)
 
-    if match:
-        svg_content = match.group(0)  # Get the matched SVG content
-        return svg_content
+    if svg_tag_match:
+        svg_tag = svg_tag_match.group(1)  # Get the <svg> tag
+
+        # Modify the width and height in the <svg> tag
+        updated_svg_tag = re.sub(r'width="[^"]+"', f'width="{new_width}"', svg_tag)
+        updated_svg_tag = re.sub(r'height="[^"]+"', f'height="{new_height}"', updated_svg_tag)
+
+        # Replace the original <svg> tag with the updated one
+        updated_file_contents = file_contents.replace(svg_tag, updated_svg_tag)
+
+        # Return the updated SVG content
+        return updated_file_contents
     else:
-        return "No <svg> tags found in the file."
+        return "No <svg> tag found in the file."
 
 def simple_mode():
     title_text = input("What text do you want in the title bar? (Typically the company name): ")
@@ -197,12 +206,10 @@ def pretty_mode():
     links_color = '#0000EE'
     output = input('What do you want the file to be called? (Default: output.html): ')
 
-    extract_svg_content(company_logo)
-
     data = {
         'title_text': title_text,
         'welcome_text': welcome_text,
-        'company_logo': extract_svg_content(company_logo),
+        'company_logo': extract_and_modify_svg(company_logo, '200px', '200px'),
         'address': address,
         'phone_number': phone_number,
         'connect_button': connect_button,
@@ -230,6 +237,8 @@ def pretty_mode():
 def advanced_mode():
     title_text = input("What text do you want in the title bar? (Typically the company name): ")
     company_logo = input("Provide a .SVG file of the company logo. (Path to .SVG file no quotes or whitespace): ")
+    svg_width = input('What width do you want the SVG logo to be? (200px): ')
+    svg_height = input('What height do you want the SVG logo to be? (200px): ')
     welcome_text = input('Enter the text you want to display. ("Enjoy our free WiFi!"): ')
     connect_button = input('What do you want the "connect button" to say?: ')
     visit_us = input('Where do you want the "visit us" button to link?: ')
@@ -247,7 +256,7 @@ def advanced_mode():
     data = {
         'title_text': title_text,
         'welcome_text': welcome_text,
-        'company_logo': extract_svg_content(company_logo),
+        'company_logo': extract_and_modify_svg(company_logo, svg_width, svg_height),
         'address': address,
         'phone_number': phone_number,
         'connect_button': connect_button,
