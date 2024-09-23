@@ -60,6 +60,7 @@ To run, execute dolphintrap.
 ## Authors
 
 - [@AL4K4Z4M](https://www.github.com/AL4K4Z4M)
+- Template.html was a modified template from [flipper-zero-evil-portal by bigbrodude6119](https://github.com/bigbrodude6119/flipper-zero-evil-portal)
 
 
 
