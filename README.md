@@ -41,13 +41,13 @@ To install, first clone the repository.
 Navigate to the DolphinTrapCLI directory.
 
 ```bash
-  cd path/of/DolphinTrapCLI
+  cd DolphinTrapCLI
 ```
 
 Install requirements.
 
 ```bash
-  pip install -r /path/to/requirements.txt
+  pip install -r requirements.txt
 ```
 ## Run
 
