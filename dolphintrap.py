@@ -211,6 +211,7 @@ def pretty_mode():
     phone_number = input('What is the phone number of the location? ( (555)555-5555) ): ')
     next()
     button_color = input('What color do you want the "connect button" to be? (HEX VALUE): ')
+    next()
     hover_color = input('What color do you want the "connect button" to be when hovered over? (HEX VALUE): ')
     next()
     output = input('What do you want the file to be called? (Default: output.html): ')
@@ -228,6 +229,10 @@ def pretty_mode():
         'hover_color': hover_color,
         'links_color': '#0000EE',
         'visit_us': 'visit_us',
+        'tos': 'tos',
+        'privacy': 'privacy',
+        'faq': 'faq',
+        'contact_us': 'contact',
     }
 
     # Read the HTML template
@@ -257,6 +262,8 @@ def pretty_connected():
     next()
     phone_number = input('What is the phone number of the location? ( (555)555-5555) ): ')
     next()
+    visit_us = input('Where do you want the "visit us" button to link?: ')
+    next()
     tos = input('Where do you want the "Terms of Service" button to link?: ')
     next()
     privacy = input('Where do you want the "Privacy Policy" button to link?: ')
@@ -266,6 +273,7 @@ def pretty_connected():
     contact = input('Where do you want the "Contact Us" button to link?: ')
     next()
     button_color = input('What color do you want the "connect button" to be? (HEX VALUE): ')
+    next()
     hover_color = input('What color do you want the "connect button" to be when hovered over? (HEX VALUE): ')
     next()
     output = input('What do you want the file to be called? (Default: output.html): ')
@@ -282,7 +290,7 @@ def pretty_connected():
         'button_color': button_color,
         'hover_color': hover_color,
         'links_color': '#0000EE',
-        'visit_us': 'visit_us',
+        'visit_us': visit_us,
         'tos': tos,
         'privacy': privacy,
         'faq': faq,
@@ -320,7 +328,8 @@ def advanced_mode():
     next()
     phone_number = input('What is the phone number of the location? ( (555)555-5555) ): ')
     next()
-    background_color = input('What color do you want the background to be? (HEX VALUE, #f4f4f4 is the grey used in simple mode): ')
+    background_color = input(
+        'What color do you want the background to be? (HEX VALUE, #f4f4f4 is the grey used in simple mode): ')
     next()
     form_color = input('What color do you want the form to be? (HEX VALUE, #fff is the white used in simple mode): ')
     next()
@@ -394,7 +403,8 @@ def advanced_connected():
     next()
     contact = input('Where do you want the "Contact Us" button to link?: ')
     next()
-    background_color = input('What color do you want the background to be? (HEX VALUE, #f4f4f4 is the grey used in simple mode): ')
+    background_color = input(
+        'What color do you want the background to be? (HEX VALUE, #f4f4f4 is the grey used in simple mode): ')
     next()
     form_color = input('What color do you want the form to be? (HEX VALUE, #fff is the white used in simple mode): ')
     next()
@@ -442,8 +452,8 @@ def art_mode():
     clear_console()
     for logo in ascii_logos:
         print(Fore.YELLOW + Style.BRIGHT + logo)
-    returnfromart = input("Press enter to return to the main menu.")
-    if returnfromart == "":
+    return_from_art = input("Press enter to return to the main menu.")
+    if return_from_art == "":
         clear_console()
         choose_trap_mode()
     else:
@@ -459,9 +469,11 @@ def choose_trap_mode():
     print()
     print(Fore.WHITE + Style.BRIGHT + "1. Basic Mode")
     print()
-    print(Fore.MAGENTA + Style.BRIGHT + "2. Pretty Mode",Fore.CYAN + Style.BRIGHT + """       3. Pretty""",Fore.GREEN + Style.BRIGHT +"""Connected""")
+    print(Fore.MAGENTA + Style.BRIGHT + "2. Pretty Mode",Fore.MAGENTA + Style.BRIGHT +
+          """       3. Pretty""",Fore.CYAN + Style.BRIGHT +"""Connected""")
     print()
-    print(Fore.YELLOW+ Style.BRIGHT + """4. Advanced Mode""",Fore.CYAN + Style.BRIGHT + """     5. Advanced""",Fore.GREEN + Style.BRIGHT +"""Connected""")
+    print(Fore.YELLOW + Style.BRIGHT + """4. Advanced Mode""",Fore.YELLOW + Style.BRIGHT +
+          """     5. Advanced""",Fore.CYAN + Style.BRIGHT +"""Connected""")
     print()
     print(Fore.BLUE + Style.BRIGHT + "6. Art Mode")
     print()
