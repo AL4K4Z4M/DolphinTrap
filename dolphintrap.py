@@ -127,8 +127,9 @@ ascii_logos = ["""
 #Prints text about me and the project
 def intro():
     print(Fore.WHITE + Style.BRIGHT + """
-                                          Hello! Welcome to DolphinTrap!
+                                        Hello! Welcome to DolphinTrap CLI!
                                 This is a tool to generate captive portal HTML files.
+                            This tool
         """)
 
 def clear_console():

@@ -41,13 +41,13 @@ To install, first clone the repository.
 Navigate to the DolphinTrapCLI directory.
 
 ```bash
-  cd DolphinTrapCLI
+  cd path/of/DolphinTrapCLI
 ```
 
 Install requirements.
 
 ```bash
-  pip install -r requirements.txt
+  pip install -r /path/to/requirements.txt
 ```
 ## Run
 
@@ -60,7 +60,6 @@ To run, execute dolphintrap.
 ## Authors
 
 - [@AL4K4Z4M](https://www.github.com/AL4K4Z4M)
-- template.html is a modified portal from [flipper-zero-evil-portal by bigbrodude6119](https://github.com/bigbrodude6119/flipper-zero-evil-portal)
 
 
 
