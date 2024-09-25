@@ -2,9 +2,9 @@
 ![Logo](https://github.com/AL4K4Z4M/DolphinTrapCLI/blob/main/dolphin_trap_logo.png?raw=true)
 
 
-# DolphinTrapCLI
+# DolphinTrap
 
-DolphinTrapCLI is a command line interface tool that helps a user create evil portals for use on Flipper Zero devices,
+DolphinTrap is a command-line interface tool that helps a user create evil portals for use on Flipper Zero devices,
 
 # Features
 
@@ -21,27 +21,27 @@ DolphinTrapCLI is a command line interface tool that helps a user create evil po
 - Pretty login form
 - More questions about your target (address, phone number)
 - User should upload .SVG file for this page (rescaled to 200px)
-- User chooses colors for connect button in form of #hexvalue
+- User chooses colors for the connect button in the form of #hexvalue
 - Choice of connected version
 
 ### Advanced Mode (Full Customization)
 
 - Everything above
 - Full customization.
-- All colors are changeable (form, background, links, button, ect)
-- .SVG file can be fine tuned to whatever size you want.
+- All colors are changeable (form, background, links, button, ect.)
+- The .SVG file can be fine-tuned to whatever size you want.
 ## Installation
 
 To install, first clone the repository.
 
 ```bash
-  git clone https://github.com/AL4K4Z4M/DolphinTrapCLI.git
+  git clone https://github.com/AL4K4Z4M/DolphinTrap.git
 ```
 
-Navigate to the DolphinTrapCLI directory.
+Navigate to the DolphinTrap directory.
 
 ```bash
-  cd path/of/DolphinTrapCLI
+  cd path/of/DolphinTrap
 ```
 
 Install requirements.
