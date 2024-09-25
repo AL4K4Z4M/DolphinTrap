@@ -2,9 +2,9 @@
 ![Logo](https://github.com/AL4K4Z4M/DolphinTrapCLI/blob/main/dolphin_trap_logo.png?raw=true)
 
 
-# DolphinTrap
+# DolphinTrapCLI
 
-DolphinTrap is a command line interface tool that helps a user create evil portals for use on Flipper Zero devices.
+DolphinTrapCLI is a command line interface tool that helps a user create evil portals for use on Flipper Zero devices,
 
 # Features
 
@@ -35,13 +35,13 @@ DolphinTrap is a command line interface tool that helps a user create evil porta
 To install, first clone the repository.
 
 ```bash
-  git clone https://github.com/AL4K4Z4M/DolphinTrap.git
+  git clone https://github.com/AL4K4Z4M/DolphinTrapCLI.git
 ```
 
 Navigate to the DolphinTrapCLI directory.
 
 ```bash
-  cd path/of/DolphinTrap
+  cd path/of/DolphinTrapCLI
 ```
 
 Install requirements.

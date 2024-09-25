@@ -229,11 +229,16 @@ def pretty_mode():
         'button_color': button_color,
         'hover_color': hover_color,
         'links_color': '#0000EE',
-        'visit_us': 'visit_us',
-        'tos': 'tos',
-        'privacy': 'privacy',
-        'faq': 'faq',
-        'contact_us': 'contact',
+        'website': 'visit_us',
+        'website_text': 'Visit Us',
+        'footer_1_text': 'Terms of Service',
+        'footer_1': 'tos',
+        'footer_2_text': 'Privacy_Policy',
+        'footer_2': 'privacy',
+        'footer_3_text': 'Contact Us',
+        'footer_3': 'contact_us',
+        'footer_4_text': 'FAQ',
+        'footer_4' : 'faq',
     }
 
     # Read the HTML template
@@ -263,15 +268,15 @@ def pretty_connected():
     next()
     phone_number = input('What is the phone number of the location? ( (555)555-5555) ): ')
     next()
-    visit_us = input('Where do you want the "visit us" button to link?: ')
+    website = input('Where do you want the "visit us" button to link?: ')
     next()
-    tos = input('Where do you want the "Terms of Service" button to link?: ')
+    footer_1 = input('Where do you want the "Terms of Service" button to link?: ')
     next()
-    privacy = input('Where do you want the "Privacy Policy" button to link?: ')
+    footer_2 = input('Where do you want the "Privacy Policy" button to link?: ')
     next()
-    faq = input('Where do you want the "FAQ" button to link?: ')
+    footer_3 = input('Where do you want the "FAQ" button to link?: ')
     next()
-    contact = input('Where do you want the "Contact Us" button to link?: ')
+    footer_4 = input('Where do you want the "Contact Us" button to link?: ')
     next()
     button_color = input('What color do you want the "connect button" to be? (HEX VALUE): ')
     next()
@@ -291,11 +296,16 @@ def pretty_connected():
         'button_color': button_color,
         'hover_color': hover_color,
         'links_color': '#0000EE',
-        'visit_us': visit_us,
-        'tos': tos,
-        'privacy': privacy,
-        'faq': faq,
-        'contact_us': contact,
+        'website_text': 'Visit Us',
+        'website': website,
+        'footer_1_text': 'Terms of Service',
+        'footer_1': footer_1,
+        'footer_2_text': 'Privacy_Policy',
+        'footer_2': footer_2,
+        'footer_3_text': 'Contact Us',
+        'footer_3': footer_3,
+        'footer_4_text': 'FAQ',
+        'footer_4': footer_4,
     }
 
     # Read the HTML template
@@ -329,6 +339,16 @@ def advanced_mode():
     next()
     phone_number = input('What is the phone number of the location? ( (555)555-5555) ): ')
     next()
+    website_text = input('What do you want the "Visit us" button to say?: ')
+    next()
+    footer_1_text = input('What do you want "Footer 1" to say?: ')
+    next()
+    footer_2_text = input('What do you want "Footer 2" to say?: ')
+    next()
+    footer_3_text = input('What do you want "Footer 3" to say?: ')
+    next()
+    footer_4_text = input('What do you want "Footer 4" to say?: ')
+    next()
     background_color = input(
         'What color do you want the background to be? (HEX VALUE, #f4f4f4 is the grey used in simple mode): ')
     next()
@@ -354,11 +374,16 @@ def advanced_mode():
         'button_color': button_color,
         'hover_color': hover_color,
         'links_color': links_color,
-        'visit_us': 'visit_us',
-        'tos': 'tos',
-        'privacy': 'privacy',
-        'contact': 'contact_us',
-        'faq' : 'faq',
+        'website_text': website_text,
+        'website': 'website',
+        'footer_1_text': footer_1_text,
+        'footer_1': 'footer_1',
+        'footer_2_text': footer_2_text,
+        'footer_2': 'footer_2',
+        'footer_3_text': footer_3_text,
+        'footer_3': 'footer_3',
+        'footer_4_text': footer_4_text,
+        'footer_4' : 'footer_4',
     }
 
 
@@ -390,19 +415,29 @@ def advanced_connected():
     next()
     connect_button = input('What do you want the "connect button" to say?: ')
     next()
-    visit_us = input('Where do you want the "visit us" button to link?: ')
+    website_text = input('What do you want the "Visit us" button to say?: ')
+    next()
+    website = input('Where do you want the "Visit us" button to link?: ')
     next()
     address = input('Where is the physical address of this location? (555 W Street Rd, City, State 55555): ')
     next()
     phone_number = input('What is the phone number of the location? ( (555)555-5555) ): ')
     next()
-    tos = input('Where do you want the "Terms of Service" button to link?: ')
+    footer_1_text = input('What do you want "Footer 1" to say?: ')
     next()
-    privacy = input('Where do you want the "Privacy Policy" button to link?: ')
+    footer_1 = input('Where do you want the "Footer 1" button to link?: ')
     next()
-    faq = input('Where do you want the "FAQ" button to link?: ')
+    footer_2_text = input('What do you want "Footer 2" to say?: ')
     next()
-    contact = input('Where do you want the "Contact Us" button to link?: ')
+    footer_2 = input('Where do you want the "Footer 2" button to link?: ')
+    next()
+    footer_3_text = input('What do you want "Footer 3" to say?: ')
+    next()
+    footer_3 = input('Where do you want the "Footer 3" button to link?: ')
+    next()
+    footer_4_text = input('What do you want "Footer 4" to say?: ')
+    next()
+    footer_4 = input('Where do you want the "Footer 4" button to link?: ')
     next()
     background_color = input(
         'What color do you want the background to be? (HEX VALUE, #f4f4f4 is the grey used in simple mode): ')
@@ -429,11 +464,16 @@ def advanced_connected():
         'button_color': button_color,
         'hover_color': hover_color,
         'links_color': links_color,
-        'visit_us': visit_us,
-        'tos': tos,
-        'privacy': privacy,
-        'faq': faq,
-        'contact_us': contact,
+        'website_text': website_text,
+        'website': website,
+        'footer_1_text': footer_1_text,
+        'footer_1': footer_1,
+        'footer_2_text': footer_2_text,
+        'footer_2': footer_2,
+        'footer_3_text': footer_3_text,
+        'footer_3': footer_3,
+        'footer_4_text': footer_4_text,
+        'footer_4': footer_4,
     }
 
     # Read the HTML template
