@@ -1,8 +1,10 @@
 import os
+import subprocess
 import time
 import platform
 import random
 import re
+import customtkinter
 from colorama import Fore, Style, init
 
 # Initialize colorama
@@ -547,7 +549,18 @@ def choose_trap_mode():
 #Main function
 def main():
     clear_console()
-    choose_trap_mode()
+    gui = input("Would you like to use the GUI? (Y/N): ")
+    if gui.lower() == "y":
+        subprocess.run(["python", "dolphintrap_gui.py"])
+    elif gui.lower() == "n":
+        clear_console()
+        intro()
+        choose_trap_mode()
+    else :
+        print(Fore.RED + Style.BRIGHT + "Invalid input. Please enter Y or N.")
+        time.sleep(3)
+        clear_console()
+        main()
 
 #if __name__ == '__dolphintrap.py__'
 if __name__ == '__main__':
