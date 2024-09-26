@@ -551,7 +551,10 @@ def main():
     clear_console()
     gui = input("Would you like to use the GUI? (Y/N): ")
     if gui.lower() == "y":
-        subprocess.run(["python", "dolphintrap_gui.py"])
+        print("Too bad! It's Still in development!")
+        clear_console()
+        intro()
+        choose_trap_mode()
     elif gui.lower() == "n":
         clear_console()
         intro()
