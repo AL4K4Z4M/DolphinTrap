@@ -31,26 +31,26 @@ DolphinTrap is a command-line interface tool that helps a user create evil porta
 To install, first clone the repository.
 
 ```bash
-  git clone https://github.com/AL4K4Z4M/DolphinTrap.git
+git clone https://github.com/AL4K4Z4M/DolphinTrap.git
 ```
 
 Navigate to the DolphinTrap directory.
 
 ```bash
-  cd path/of/DolphinTrap
+cd DolphinTrap
 ```
 
 Install requirements.
 
 ```bash
-  pip install -r /path/to/requirements.txt
+pip install -r requirements.txt
 ```
 ## Run
 
 To run, execute dolphintrap.
 
 ```bash
-  python dolphintrap.py
+python dolphintrap.py
 ```
 
 ## Authors
