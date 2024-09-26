@@ -1,7 +1,3 @@
-
-![Logo]("https://github.com/AL4K4Z4M/DolphinTrap_gui/blob/main/Images/dolphin_trap_logo.png")
-
-
 # DolphinTrap
 
 DolphinTrap is a command-line interface tool that helps a user create evil portals for use on Flipper Zero devices,
