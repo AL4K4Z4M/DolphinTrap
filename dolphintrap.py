@@ -4,6 +4,7 @@ import time
 import platform
 import random
 import re
+import webbrowser
 import customtkinter
 from colorama import Fore, Style, init
 
@@ -235,7 +236,7 @@ def pretty_mode():
         'website_text': 'Visit Us',
         'footer_1_text': 'Terms of Service',
         'footer_1': 'tos',
-        'footer_2_text': 'Privacy_Policy',
+        'footer_2_text': 'Privacy Policy',
         'footer_2': 'privacy',
         'footer_3_text': 'Contact Us',
         'footer_3': 'contact_us',
@@ -551,10 +552,9 @@ def main():
     clear_console()
     gui = input("Would you like to use the GUI? (Y/N): ")
     if gui.lower() == "y":
-        print(Fore.RED + Style.BRIGHT + "Too bad! It's Still in development!")
+        print("Too bad, still in development.")
         time.sleep(3)
         clear_console()
-        intro()
         choose_trap_mode()
     elif gui.lower() == "n":
         clear_console()
