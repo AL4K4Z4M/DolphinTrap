@@ -551,7 +551,8 @@ def main():
     clear_console()
     gui = input("Would you like to use the GUI? (Y/N): ")
     if gui.lower() == "y":
-        print("Too bad! It's Still in development!")
+        print(Fore.RED + Style.BRIGHT + "Too bad! It's Still in development!")
+        time.sleep(3)
         clear_console()
         intro()
         choose_trap_mode()
