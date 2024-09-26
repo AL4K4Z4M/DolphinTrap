@@ -1,10 +1,5 @@
-import os
-import time
-import platform
-import random
 import re
 import webbrowser
-from io import text_encoding
 from colorama import Fore, Style, init
 
 # Initialize colorama
@@ -87,8 +82,8 @@ def submit_all_data():
     store_data('connect_button', gui_connect_button_text.get())
     store_data('address', gui_company_address.get())
     store_data('phone_number', gui_company_phone.get())
-    store_data('connect_button_color', connect_button_color.get())
-    store_data('connect_button_hover_color', connect_button_hover_color.get())
+    store_data('button_color', connect_button_color.get())
+    store_data('hover_color', connect_button_hover_color.get())
     store_data('output_file_name', output_file_name.get())
     create_html()
 # Dictionary to store the data
