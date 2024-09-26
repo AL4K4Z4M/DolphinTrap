@@ -4,8 +4,6 @@ import time
 import platform
 import random
 import re
-import webbrowser
-import customtkinter
 from colorama import Fore, Style, init
 
 # Initialize colorama
