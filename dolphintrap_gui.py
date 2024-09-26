@@ -16,6 +16,7 @@ root = customtkinter.CTk()
 root.title("DolphinTrap GUI")
 root.geometry("1200x950")
 root.title("DolphinTrap GUI")
+root.wm_iconbitmap('dolphin_trap_gui.ico')
 root.resizable(False, False)
 
 
@@ -168,7 +169,7 @@ submit_all_button.grid(row=13, column=0, padx=20, pady=20, sticky="ew")
 
 # Labels for messages (success and error)
 message_label = customtkinter.CTkLabel(root, font=('Arial',15,'underline'), text="DolphinTrap is developed by AL4K4Z4M. Please consider checking out their github.", fg_color=None)
-message_label.bind("<Button-1>", lambda e: callback("https://pornhub.com"))
+message_label.bind("<Button-1>", lambda e: callback("https://github.com/AL4K4Z4M"))
 message_label.grid(row=15, column=0, padx=20, pady=10, sticky="ew")
 
 
