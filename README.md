@@ -1,5 +1,5 @@
 
-![Logo](https://github.com/AL4K4Z4M/DolphinTrap/blob/main/dolphin_trap_logo.png?raw=true)
+![Logo]("https://github.com/AL4K4Z4M/DolphinTrap/blob/main/dolphin_trap_logo.png?raw=true")
 
 
 # DolphinTrap
