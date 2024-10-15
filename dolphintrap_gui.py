@@ -113,7 +113,7 @@ gui_data = {
 }
 
 #Title of the APP
-app_title = customtkinter.CTkLabel(root, font=('system',40, 'bold',), text_color='orange', text="D o l p i n   T r a p   G U I", wraplength=1200)
+app_title = customtkinter.CTkLabel(root, font=('system',40, 'bold',), text_color='orange', text="D o l p h i n   T r a p   G U I", wraplength=1200)
 app_title.grid(row=0, column=0, padx=10, pady=10, sticky="ew")
 
 # Entry 1: Title Bar
